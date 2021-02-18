@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardBody,CardTitle,CardImg,CardText,CardSubtitle,Button,Row,Col,Container,CardHeader} from 'reactstrap';
-import MyChart from '../../components/dashboard/BarChart';
+import {Card,CardBody,CardImg,CardText,CardSubtitle,Button,CardHeader} from 'reactstrap';
 import './dashboard.css';
 import axios from 'axios';
 import image from './images/image1.png';
@@ -179,8 +178,8 @@ class ItemDetails extends Component {
                             <CardSubtitle className="ProductsCardSubTitle" style={{color:"grey",fontWeight:"bold"}}>Color options</CardSubtitle><CardSubtitle style={{color:"blueviolet",textAlign:"left"}}>Red Grey</CardSubtitle>
                             <CardSubtitle className="ProductsCardSubTitle" style={{color:"grey",fontWeight:"bold"}}>Availability</CardSubtitle><CardSubtitle style={{color:"blueviolet",textAlign:"left"}}>{
 
-                            this.props.itemid == "100122" || this.props.itemid == "100005" || this.props.itemid == "100003" || this.props.itemid == "100014" || this.props.itemid == "100013" 
-                            || this.props.itemid == "100019" || this.props.itemid == "100132" || this.props.itemid == "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle>
+                            this.props.itemid === "100122" || this.props.itemid === "100005" || this.props.itemid === "100003" || this.props.itemid === "100014" || this.props.itemid === "100013" 
+                            || this.props.itemid === "100019" || this.props.itemid === "100132" || this.props.itemid === "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle>
                              
                                 {/* <div style={{ float: "left" }}>
                                     <Button outline color="secondary" style={{ marginRight: "3px" }} onClick={() => this.handleDecreaseQty()}>-</Button>

@@ -1,12 +1,8 @@
 
 import {
-  all,
   call,
-  fork,
   put,
-  take,
   takeEvery,
-  delay
 } from "redux-saga/effects";
 import axios from 'axios';
 
@@ -46,9 +42,7 @@ console.log("Post object is: ",data);
 }
  return axios(reqData)
  .then(res => {
-   console.log("api called");
   const response = res.data.Item;    
-  console.log("itemlist: ",response);
   return response;
 })
    
@@ -61,16 +55,7 @@ function* fetchSubscriptionData(){
       console.log("response: ",response);
   yield put({type: 'DATA',payload:response})
 }catch (error) {
-  let message;
-  switch (error.status) {
-    case 500:
-      message = "Internal Server Error";
-      break;
-    case 401:
-      message = "Invalid credentials";
-      break;
-    default:
-      message = error;
+      console.log(error);
   }
 }
 }

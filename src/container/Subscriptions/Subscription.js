@@ -34,7 +34,6 @@ import AddNewSubscription from "../../components/subscriptions/AddNewSubscriptio
         add: false
     }
         addNewSubForm =() =>{
-            const addSub= this.state.add;
             return(
                 <AddNewSubscription />
             )

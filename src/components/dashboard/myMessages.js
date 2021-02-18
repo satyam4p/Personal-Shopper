@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container} from 'reactstrap';
+import {Card,CardBody,CardTitle,CardText} from 'reactstrap';
 import msg from '../../components/dashboard/images/msg.png';
 import './dashboard.css';
 class MyMessages extends Component {
@@ -22,7 +22,7 @@ class MyMessages extends Component {
         return ( <div>
            <Card className="MyMessageClass">
                 <CardBody className="">
-                <CardTitle className="title"><img className="imgSize" src={msg}/><b> MY MESSAGES</b></CardTitle>
+                <CardTitle className="title"><img className="imgSize" src={msg} alt=""/><b> MY MESSAGES</b></CardTitle>
                 <CardText className="CardText">Message:{message}</CardText>
 
 

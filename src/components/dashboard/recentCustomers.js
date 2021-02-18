@@ -1,5 +1,5 @@
 import React, { Component, } from 'react';
-import {Toast,ToastHeader,ToastBody,Card,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container} from 'reactstrap';
+import {Card,CardBody,CardTitle} from 'reactstrap';
 import graph from '../../components/dashboard/images/graph.png';
 import './dashboard.css';
 
@@ -67,7 +67,7 @@ class RecentCustomeres extends Component {
       <Card className="recentCustCard">
   
                 <CardBody className="stylerecomend">
-                <CardTitle className="title"><img className="imgSize" src={graph}/> <b> RECENT CUSTOMERS</b></CardTitle><br/>   
+                <CardTitle className="title"><img className="imgSize" src={graph} alt="img"/> <b> RECENT CUSTOMERS</b></CardTitle><br/>   
                     {
                     this.getCustomerDetails()  
                     }

@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
-import {CardImg, Button, Table, Input, Card, CardBody, CardText, Row, Col, CardTitle, Container,
-    CardSubtitle, Label,Modal,ModalBody,ModalFooter,ModalHeader,ModalProps, Form,Alert,CardHeader} from 'reactstrap';
-import Dialog from 'react-dialog';
+import {CardImg, Button, Input, Card, CardBody, CardText, Row, Col, CardTitle, Container,
+    CardSubtitle,Modal,ModalBody,ModalFooter,ModalHeader, Form,CardHeader} from 'reactstrap';
 import './OrderDetails.css';
 import axios from 'axios';
-import ItemDetails from '../../components/OrderDetails/ItemDetails';
 import ItemImg from '../../images/image1.png';
 import SearchIcon from '../../images/Search-512.png';
 //import Products from '../Products/ItemList';
 import '../../components/styleGroups/styleGroupCard.css';
 import image from '../../images/image1.png';
-import plus from '../../images/plus.png';
-import minus from '../../images/minus.png';
-import remove from '../../images/remove.png';
 import CustomerSurveyDetails from '../../components/CustomerPreferences/CustomerSurvey';
-import { ModalTitle } from 'react-bootstrap';
 
 
 export default class CompleteOrderDeatails extends Component {
@@ -23,7 +17,6 @@ export default class CompleteOrderDeatails extends Component {
         this.state = {
             OrderDetails: [],
             OrderLines: [],
-            
             CustomOrderLines: [],
             fetched: false,
             OrderDate: "",
@@ -114,7 +107,7 @@ export default class CompleteOrderDeatails extends Component {
                 CustomerID:customerID
             })
             console.log("status in did mount: ",this.state.OrderDetails.Status)
-            if(this.state.OrderDetails.Status=="Cancelled"){
+            if(this.state.OrderDetails.Status==="Cancelled"){
                 this.setState({
                     Disable:true
                 })
@@ -213,7 +206,6 @@ export default class CompleteOrderDeatails extends Component {
             }
             axios(ReqData).then(res => {
             console.log("response from get customer list service::",res.data);
-            var len = res.data
             this.setState({
                 customerSubscriptionProgram:res.data.ExtnCustomerSubscription[0].ExtnSubscriptionProgram,
                 ExtnSubscriptionDate:res.data.ExtnCustomerSubscription[0].ExtnSubscriptionDate,
@@ -235,7 +227,7 @@ export default class CompleteOrderDeatails extends Component {
          const unitPrice = val.PrimaryInformation.UnitCost;
          var currentOrderLines = this.state.OrderLines;
          console.log("CurrentOrderLines are: ",currentOrderLines);
-         if(currentOrderLines==undefined){
+         if(currentOrderLines===undefined){
              currentOrderLines=[];
          }
          console.log("Current orderlines length: ",currentOrderLines.length);
@@ -274,12 +266,12 @@ export default class CompleteOrderDeatails extends Component {
             console.log("added orderlines in state: ",this.state.AddedOrderLines);
             console.log("Current ORderLines after add: ",this.state.CurrentOrderLines);
         }
-        else if(currentOrderLines.length == 0){
-            var NewPrimeLineNo = "1";
+        else if(currentOrderLines.length === 0){
+            var newPrimeLineNo = "1";
             const CustomOrderLine = {
                 Action: "CREATE",
                 OrderedQty: "1",
-                PrimeLineNo: NewPrimeLineNo,
+                PrimeLineNo: newPrimeLineNo,
                 SubLineNo: "1",
                 DeliveryMethod: "SHP",
                 Item: {
@@ -293,14 +285,14 @@ export default class CompleteOrderDeatails extends Component {
                 }
             }
             
-            var addedOrderLines = this.state.OrderLines;
+            var AddedOrderLines = this.state.OrderLines;
             if(!addedOrderLines){
-                addedOrderLines = [];
-            addedOrderLines.push(CustomOrderLine);
+                AddedOrderLines = [];
+            AddedOrderLines.push(CustomOrderLine);
         }
             this.setState({
-                AddedOrderLines:addedOrderLines,
-                OrderLines:addedOrderLines,
+                AddedOrderLines:AddedOrderLines,
+                OrderLines:AddedOrderLines,
                 OrderLinesAdded:true
 
             })            
@@ -310,11 +302,11 @@ export default class CompleteOrderDeatails extends Component {
         else{
             console.log("AddOrderLines in state are: ",this.state.AddedOrderLines);
             console.log("OrderlInes is state are: ",this.state.OrderLines)
-            var NewPrimeLineNo = "1";
+            var NewPrimeLineNos = "1";
             const CustomOrderLine = {
                 Action: "CREATE",
                 OrderedQty: "1",
-                PrimeLineNo: NewPrimeLineNo,
+                PrimeLineNo: NewPrimeLineNos,
                 SubLineNo: "1",
                 DeliveryMethod: "SHP",
                 Item: {
@@ -328,14 +320,14 @@ export default class CompleteOrderDeatails extends Component {
                 }
             }
             
-            var addedOrderLines = this.state.OrderLines;
-            if(!addedOrderLines){
-                addedOrderLines = [];
-            addedOrderLines.push(CustomOrderLine);
+            var addedOrderLine = this.state.OrderLines;
+            if(!addedOrderLine){
+                addedOrderLine = [];
+            addedOrderLine.push(CustomOrderLine);
         }
             this.setState({
-                AddedOrderLines:addedOrderLines,
-                OrderLines:addedOrderLines,
+                AddedOrderLines:addedOrderLine,
+                OrderLines:addedOrderLine,
                 OrderLinesAdded:true
 
             })            
@@ -438,7 +430,6 @@ export default class CompleteOrderDeatails extends Component {
             }
            
             return Orderlines.map((Items, index) => {
-                const { ItemID, ItemDesc } = Items
                 console.log("Items: ", Items)
                 console.log("Item is: ", Items.Item.ItemID);
                 return (
@@ -477,7 +468,7 @@ export default class CompleteOrderDeatails extends Component {
     }
     removeHandler = (val) => {
         console.log("value of Orderline to remove is: ",val);
-        const orderLineKey = val.OrderLineKey;
+    
         const primeLineNo = val.PrimeLineNo;
         console.log("PrimeLineNo is: ",primeLineNo);
         const currentOrderLines = this.state.OrderLines; 
@@ -486,9 +477,9 @@ export default class CompleteOrderDeatails extends Component {
             const len = currentOrderLines.length;
             for(var i=0;i<len;i++){
                 const primeLineNoToRemove = currentOrderLines[i].PrimeLineNo;
-                if(primeLineNo == primeLineNoToRemove){
+                if(primeLineNo === primeLineNoToRemove){
                     console.log("found!!!!!");
-                    if(currentOrderLines[i].Action == "CREATE"){
+                    if(currentOrderLines[i].Action === "CREATE"){
                         var customOrderLine = {
                             OrderHeaderKey:this.state.OrderDetails.OrderHeaderKey,
                             Action:"REMOVE",
@@ -503,7 +494,7 @@ export default class CompleteOrderDeatails extends Component {
                     }
                     else{
                         console.log("OrderLineKey in else condition is: ",currentOrderLines[i].OrderLineKey);
-                        var customOrderLine = {
+                         customOrderLine = {
                                             OrderHeaderKey:this.state.OrderDetails.OrderHeaderKey,
                                             Action:"REMOVE",
                                             PrimeLineNo:primeLineNoToRemove,
@@ -636,8 +627,8 @@ export default class CompleteOrderDeatails extends Component {
                                 <CardSubtitle className="ProductsCardSubTitle" style={{color:"grey"}}>Color options</CardSubtitle><CardSubtitle style={{color:"rgba(4,71,132)",textAlign:"left"}}>Red Grey</CardSubtitle>
                                 <CardSubtitle className="ProductsCardSubTitle" style={{color:"grey"}}>Availability</CardSubtitle><CardSubtitle style={{color:"rgba(4,71,132)",textAlign:"left"}}>{
 
-                                this.props.itemid == "100122" || this.props.itemid == "100005" || this.props.itemid == "100003" || this.props.itemid == "100014" || this.props.itemid == "100013" 
-                                || this.props.itemid == "100019" || this.props.itemid == "100132" || this.props.itemid == "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle><br />
+                                this.props.itemid === "100122" || this.props.itemid === "100005" || this.props.itemid === "100003" || this.props.itemid === "100014" || this.props.itemid === "100013" 
+                                || this.props.itemid === "100019" || this.props.itemid === "100132" || this.props.itemid === "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle><br />
                                 <div>
                                     <div style={{ float: "left" }}>
                                         <Button className="ButtonClass" outline color="secondary" style={{ marginRight: "3px" }} onClick={() => this.handleDecreaseQty()}>-</Button>
@@ -683,8 +674,8 @@ export default class CompleteOrderDeatails extends Component {
                                 <CardSubtitle className="ProductsCardSubTitle" style={{color:"grey"}}>Color options</CardSubtitle><CardSubtitle style={{color:"rgba(4,71,132)",textAlign:"left"}}>Red Grey</CardSubtitle>
                                 <CardSubtitle className="ProductsCardSubTitle" style={{color:"grey"}}>Availability</CardSubtitle><CardSubtitle style={{color:"rgba(4,71,132)",textAlign:"left"}}>{
 
-                                this.props.itemid == "100122" || this.props.itemid == "100005" || this.props.itemid == "100003" || this.props.itemid == "100014" || this.props.itemid == "100013" 
-                                || this.props.itemid == "100019" || this.props.itemid == "100132" || this.props.itemid == "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle><br />
+                                this.props.itemid === "100122" || this.props.itemid === "100005" || this.props.itemid === "100003" || this.props.itemid === "100014" || this.props.itemid === "100013" 
+                                || this.props.itemid === "100019" || this.props.itemid === "100132" || this.props.itemid === "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle><br />
                                  <div>
                                     {/* <div style={{ float: "left" }}>
                                         <Button outline color="secondary" style={{ marginRight: "3px" }} onClick={() => this.handleDecreaseQty()}>-</Button>
@@ -714,7 +705,7 @@ export default class CompleteOrderDeatails extends Component {
     }
     handleDecreaseQty = () => {
         const currQty = parseInt(this.state.qty);
-        if (currQty == 0) {
+        if (currQty === 0) {
 
         }
         const newQty = currQty - 1;
@@ -738,7 +729,7 @@ export default class CompleteOrderDeatails extends Component {
             var orderLinesTosend=[]
             var currentOrderLines = this.state.CurrentOrderLines;
             for(var i=0;i<len;i++){
-                if(currentOrderLines[i].Action == "CREATE" || currentOrderLines[i].Action=="REMOVE"){
+                if(currentOrderLines[i].Action === "CREATE" || currentOrderLines[i].Action==="REMOVE"){
                     orderLinesTosend.push(currentOrderLines[i]);
                 }
             }
@@ -811,7 +802,7 @@ export default class CompleteOrderDeatails extends Component {
             else{
                 axios(reqData).then(res => {
                     console.log("response from changeOrder: ", res.data);
-                    if(res.status==200){
+                    if(res.status===200){
                         this.setState({
                             OrderSaved:true
                         })
@@ -869,7 +860,7 @@ export default class CompleteOrderDeatails extends Component {
             else{
                 axios(reqData).then(res => {
                     console.log("response from changeOrder: ", res.data);
-                    if(res.status==200){
+                    if(res.status===200){
                         this.setState({
                             OrderSaved:true
                         })
@@ -891,12 +882,12 @@ export default class CompleteOrderDeatails extends Component {
         // console.log("No orderlines in current orderlines in state!!");
         // console.log("sending orderlines from added order lines in state!!",this.state.AddedOrderLines);
         else {
-            var len = this.state.AddedOrderLines.length;
+             len = this.state.AddedOrderLines.length;
             console.log("Current OrderLines length: ",len);
-            var orderLinesTosend=[]
-            var currentOrderLines = this.state.AddedOrderLines;
-            for(var i=0;i<len;i++){
-                if(currentOrderLines[i].Action == "CREATE" || currentOrderLines[i].Action=="REMOVE"){
+             orderLinesTosend=[]
+             currentOrderLines = this.state.AddedOrderLines;
+            for(let i=0;i<len;i++){
+                if(currentOrderLines[i].Action === "CREATE" || currentOrderLines[i].Action==="REMOVE"){
                     orderLinesTosend.push(currentOrderLines[i]);
                 }
             }
@@ -943,7 +934,7 @@ export default class CompleteOrderDeatails extends Component {
             else{
                 axios(reqData).then(res => {
                     console.log("response from changeOrder: ", res.data);
-                    if(res.status==200){
+                    if(res.status===200){
                         this.setState({
                             OrderSaved:true
                         })
@@ -1001,7 +992,7 @@ export default class CompleteOrderDeatails extends Component {
             else{
                 axios(reqData).then(res => {
                     console.log("response from changeOrder: ", res.data);
-                    if(res.status==200){
+                    if(res.status===200){
                         this.setState({
                             OrderSaved:true
                         })
@@ -1061,7 +1052,7 @@ export default class CompleteOrderDeatails extends Component {
         axios(reqData).then(res => {
             console.log("response from cancel order: ", res);
             console.log("cancelled order response data: ",res.data);
-            if(res.status==200){
+            if(res.status===200){
                 this.setState({
                     status: "Cancelled",
                     Disable:true,
@@ -1122,7 +1113,7 @@ export default class CompleteOrderDeatails extends Component {
             console.log("response from Send To Custoomer: ", res);
             console.log("status resposnse: ",res.status);
             const statusResponse = res.status;
-            if(statusResponse==200){
+            if(statusResponse===200){
                 this.setState({
                     SentToCustomer:"Y",
                     status:"Sent To Customer",
@@ -1169,7 +1160,7 @@ export default class CompleteOrderDeatails extends Component {
           if(this.state.SurveyDetails){
             return(
                 this.state.SurveyDetails.map((details,index)=>{
-                    const {ExtnSurveyQuestion,ExtnSurveyAnswerText,ExtnSurveyQuestionType} = details
+                    const {ExtnSurveyQuestion,ExtnSurveyAnswerText} = details
                     return(
                         <div >
                         {/* <p style={{fontWeight:"bold",float:"left"}}>Question Type:&nbsp;</p>
@@ -1240,10 +1231,10 @@ export default class CompleteOrderDeatails extends Component {
                                         <p>Card Details</p>
                                     </CardHeader>
                                     <Card body className="detailsCard">
-                                        <CardText style={{ textAlign: "left",color:"grey"}}>CutomerID:<p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}> {this.state.CustomerID=='undefined' ? " ": this.state.CustomerID}</p></CardText>
-                                        <CardText style={{ textAlign: "left",color:"grey"}}>Customer League:<p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}>{this.state.CustomerID=='undefined' ? " ": " Sample league"}</p></CardText>
-                                        <CardText style={{ textAlign: "left",color:"grey" }}>Gender:<p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}> {this.state.CustomerID=='undefined' ? " ": " Male"}</p></CardText>
-                                        <CardText style={{ textAlign: "left" ,color:"grey"}}>Age: <p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}>{this.state.CustomerID=='undefined' ? " ": " 23"}</p></CardText>
+                                        <CardText style={{ textAlign: "left",color:"grey"}}>CutomerID:<p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}> {this.state.CustomerID==='undefined' ? " ": this.state.CustomerID}</p></CardText>
+                                        <CardText style={{ textAlign: "left",color:"grey"}}>Customer League:<p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}>{this.state.CustomerID==='undefined' ? " ": " Sample league"}</p></CardText>
+                                        <CardText style={{ textAlign: "left",color:"grey" }}>Gender:<p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}> {this.state.CustomerID==='undefined' ? " ": " Male"}</p></CardText>
+                                        <CardText style={{ textAlign: "left" ,color:"grey"}}>Age: <p style={{ textAlign: "left", display: "inline", fontWeight: "normal",color:"rgba(4,71,132)" }}>{this.state.CustomerID==='undefined' ? " ": " 23"}</p></CardText>
                                     </Card>
                                 </Col>
                                 <Col sm="3">
@@ -1329,7 +1320,7 @@ export default class CompleteOrderDeatails extends Component {
                                 <Card className="ProductsCard" >
                                     <CardHeader style={{fontSize:"19px",backgroundColor:"rgba(4,71,132)",color:"white",textAlign:"left",height:"55px",fontWeight:"600",position:"sticky",display:"block",top:"0",zIndex:"9"}}  >
                                 <CardTitle style={{ fontSize: "20px", fontWeight: "bold", float: "left", marginLeft: "2px" }}>Browse Products</CardTitle>
-                                        <Input type="text" className="1" style={{ width: "40%", float: "right" }} placeholder="Search"  onChange={this.filteredItemList}><img src={SearchIcon} /></Input>
+                                        <Input type="text" className="1" style={{ width: "40%", float: "right" }} placeholder="Search"  onChange={this.filteredItemList}><img src={SearchIcon} alt=""/></Input>
                                         </CardHeader>
                                     
 

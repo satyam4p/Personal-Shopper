@@ -2,8 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button,  Input, CardHeader } from 'reactstrap';
 import {
-  Card, CardImg, CardText, CardGroup,CardBody,CardLink,
-  CardTitle, CardSubtitle, Container,Row, Col ,CardDeck,Table
+  Card, CardText,CardBody, CardSubtitle, Container,Row, Col ,Table
 } from 'reactstrap';
 import './customers.css';
 import {MdReorder,MdViewModule} from 'react-icons/md';
@@ -141,8 +140,7 @@ class Customer extends React.Component {
 
 
     getCustomerDetails=()=>{
-        const viewType = this.state.viewListType;
-            if(this.state.names.length==0){
+            if(this.state.names.length===0){
             return this.state.Customers.map((customer,index)=>{
                 const {league,FirstName,LastName,Sex_Age,Size,Colour_Preferences,Subscriptions} = customer;
                 return(
@@ -162,7 +160,7 @@ class Customer extends React.Component {
                     
                     <CardSubtitle style={{textAlign:"left",float:"left",color:"grey",fontWeight:"bold" }}>Sex_Age:</CardSubtitle>
                     <CardSubtitle style={{textAlign:"left" ,float:"right",paddingRight:"30px",color:"grey",fontWeight:"bold"}}>Size:</CardSubtitle><br/>
-                    <CardSubtitle style={{color:"rgba(4,71,132)",float:"left",color:"rgba(4,71,132)"}}>{Sex_Age}</CardSubtitle>
+                    <CardSubtitle style={{color:"rgba(4,71,132)",float:"left"}}>{Sex_Age}</CardSubtitle>
                     <CardSubtitle style={{color:"rgba(4,71,132)",float:"right",paddingRight:"50px"}}>{Size}</CardSubtitle><br/>
                     <CardSubtitle style={{textAlign:"left",color:"grey",fontWeight:"bold"}}>Color Preferences</CardSubtitle><CardSubtitle style={{textAlign:"left",color:"rgba(4,71,132)"}}>{Colour_Preferences}</CardSubtitle>&nbsp;
                     <CardSubtitle style={{textAlign:"left",color:"grey",fontWeight:"bold"}}>Subscriptions</CardSubtitle><CardSubtitle style={{textAlign:"left",color:"rgba(4,71,132)"}}>{Subscriptions}</CardSubtitle>
@@ -240,7 +238,7 @@ getCustomerTable =()=>{
     )
 }
 renderTableData=()=>{
-    if(this.state.names.length==0){
+    if(this.state.names.length===0){
     return this.state.Customers.map((val, index) => {
         const {league,FirstName,LastName,Sex_Age,Size,Colour_Preferences,Subscriptions} = val 
       
@@ -317,12 +315,12 @@ filterCustomers=(event)=>{
             <Container fluid={true}>
             <div >
                     <Card style={{marginTop:"10px",alignSelf:"center",width:"90%",marginLeft:"70px",border:"none"}}>
-                    { this.state.listview == false ? <Row md="4">{this.getCustomerDetails()}</Row> :this.getCustomerTable()}
-                   
+                    { this.state.listview === false ? <Row md="4">{this.getCustomerDetails()}</Row> :this.getCustomerTable()}
                     </Card>
                     </div> 
                     </Container>
-            </div> );
+            </div> 
+            );
 
 
 

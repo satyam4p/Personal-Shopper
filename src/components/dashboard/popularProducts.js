@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container} from 'reactstrap';
+import {Card,CardBody,CardTitle,Button,Row,Col} from 'reactstrap';
 import popular from '../../components/dashboard/images/popular.png'
 import popularProd from '../../components/dashboard/images/p1.png'
 import {connect} from 'react-redux';
@@ -37,7 +37,7 @@ class PopularProducts extends Component {
             
             this.state.Products.slice(0,8).map((product,index) =>
                  <Col key={index}>
-                   <img className="prodImg" src={popularProd} alt='image'/>
+                   <img className="prodImg" src={popularProd} alt=""/>
                   <p className="productName">{product.name}</p>
                 </Col>
               )
@@ -45,11 +45,10 @@ class PopularProducts extends Component {
        </Row>    </div>)   
             }  
     render() { 
-            const data="hiiii"
         return ( <div>
               <Card>
                 <CardBody>
-                <CardTitle className="title"><img className="imgSize" src={popular}/><b> POPULAR PRODUCTS</b></CardTitle>
+                <CardTitle className="title"><img className="imgSize" src={popular} alt=""/><b> POPULAR PRODUCTS</b></CardTitle>
                         <Row>   {this.getPopularProducts()} </Row>
                         { console.log("test")}
                        <Button onClick={this.props.onIncBtnClick}>BTN</Button>

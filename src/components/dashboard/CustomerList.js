@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container,CardHeader} from 'reactstrap';
-import MyChart from './BarChart';
+import {Card,CardBody,CardSubtitle,CardHeader} from 'reactstrap';
 import './dashboard.css';
 import axios from 'axios';
 class CustomerList extends Component {
@@ -48,7 +47,7 @@ class CustomerList extends Component {
         console.log("the customer list in mapcustomer function::: ",this.state.customerList);
         if(this.state.customerList){
             return this.state.customerList.map((customer,index)=>{
-                const {ExtnCustomerID,ExtnSubscriptionDate,ExtnSubscriptionEndDate,ExtnSubscriptionProgram,ExtnSubscriptionIntervalType}=customer;
+                const {ExtnCustomerID,ExtnSubscriptionDate,ExtnSubscriptionEndDate,ExtnSubscriptionProgram}=customer;
                 return(
                     <Card key={index} style={{marginBottom:"10px"}} onClick={()=>{this.getCustomerID(ExtnCustomerID)}}>
                     {/* <Card style={{marginBottom:"10px"}} > */}

@@ -1,11 +1,8 @@
 import React,   {Component} from 'react';
-import RS from 'reactstrap';
 import { Container, Row, Col} from 'reactstrap';
 import '../../components/styleGroups/styleGroupCard.css';
-import {Button, CardDeck,CardColumns,Input,Jumbotron,Card,CardImg,
-        CardBody,CardTitle,CardSubtitle,CardGroup,CardText} from 'reactstrap';
+import {Button} from 'reactstrap';
 import StyleGroupCards from '../../components/styleGroups/StyleGroupCards';
-import axios from 'axios';
 import {connect} from 'react-redux'
 import * as actionTypes from '../../redux/StyleGroups/action';
 
@@ -35,8 +32,7 @@ import * as actionTypes from '../../redux/StyleGroups/action';
         //     {  this.props.onIncBtnClick(res.data.Item)
         //     }
         // })
-        {  this.props.onIncBtnClick()
-        }
+        this.props.onIncBtnClick();
         
     }
 

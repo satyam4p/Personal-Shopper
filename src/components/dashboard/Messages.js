@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardImg,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container,CardHeader} from 'reactstrap';
-import MyChart from './BarChart';
+import {Card,CardImg,CardBody,CardText,CardHeader} from 'reactstrap';
 import './dashboard.css';
 import axios from 'axios';
 import MessageIcons from "./images/MessageIcons.jpg";
@@ -13,7 +12,6 @@ class Messages extends Component {
             NoteList:[]       
         }
     }
-
      /** APIcall to fetch MessageInfo during Pageload */
     componentDidMount(){
         
@@ -63,12 +61,12 @@ class Messages extends Component {
     toViewMessageList = () =>  {
 
         if (this.state.NoteList){
-            return this.state.NoteList.map((MessageInfo,index) => {  
+            return this.state.NoteList.map((MessageInfo,index)=>{  
                 if (MessageInfo){
-                    return ( 
-                        this.MessageListInfo(MessageInfo, index)
+                    return (this.MessageListInfo(MessageInfo, index)
                     )
                 }
+                return "";
             });
         }
     }

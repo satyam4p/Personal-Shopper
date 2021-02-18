@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container} from 'reactstrap';
+import {Card,CardBody,CardTitle,Row,Col} from 'reactstrap';
 import recent from '../../components/dashboard/images/recent.png';
 import p1 from '../../components/dashboard/images/p1.png';
 import './dashboard.css';
@@ -28,7 +28,7 @@ class NewArrival extends Component {
             {
             this.state.Products.slice(0,8).map((product,index) =>
                 <Col key={index}>
-                    <img className="prodImg" src={p1}  alt='image'/>
+                    <img className="prodImg" src={p1}  alt=''/>
                
                 <p className="productName">{product.name}</p>
                 </Col>
@@ -43,7 +43,7 @@ class NewArrival extends Component {
         return ( <div>
           <Card>
                 <CardBody className="">
-                <CardTitle className="title"><img className="imgSize" src={recent}/> <b>NEW ARRIVAlS</b></CardTitle>
+                <CardTitle className="title"><img className="imgSize" src={recent} alt=""/> <b>NEW ARRIVAlS</b></CardTitle>
                 {this.getNewArrivals()}     
                 </CardBody>
             </Card>

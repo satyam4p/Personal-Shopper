@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import {Label,Button,Card,CardBody,CardText} from 'reactstrap';
 
 export default class CustomerSurveyDetails extends Component{
 

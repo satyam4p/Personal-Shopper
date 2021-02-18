@@ -1,17 +1,15 @@
 import React,{Component} from 'react';
-import {Button,Card,CardBody,CardText,Input,Label,CardHeader,InputGroupAddon,Collapse,
-    Form,FormGroup,Table,Container, Row, Col,Dropdown,DropdownItem,DropdownToggle,
-    UncontrolledButtonDropdown,DropdownMenu,ButtonDropdown} from 'reactstrap';
+import {Button,Card,Input,Label,CardHeader,
+    Form,FormGroup,Table,Container, Row, Col,DropdownItem,DropdownToggle,DropdownMenu,ButtonDropdown} from 'reactstrap';
 
 
 import './OrderSearchscr.css';
-import {useTable} from "react-table";
 // import Table from './Table';
 import axios from 'axios';
-import ReactTable from 'react-table';
+
 import {Link} from 'react-router-dom';  
 // import {Link} from 'react-router';
-import OrderDetails from '../OrderDetails/OrderDetails';
+
 
 export default class orderSearch extends Component{
     data=[];
@@ -46,18 +44,6 @@ export default class orderSearch extends Component{
             IsService:"Y"
         }
         console.log("post object is: ",inputData);
-        const reqData = {
-            method:"POST",
-            // url:`http://localhost:8080/Rabbit/proxy/service/Httpinvoke`,
-            //url:`http://localhost:5000/api`,
-            url: `http://207.148.123.221:5000/api`,
-            data:JSON.stringify(inputData),
-            headers:{
-                "Content-Type":"application/json",
-                // "X-CSRFToken":window.AppInfo.bridgecsrftoken
-            }
-          
-        }
         // axios(reqData).then(res =>{
         //     console.log("response data is: ",res.data.Order);
             
@@ -201,25 +187,25 @@ export default class orderSearch extends Component{
         handleClick=(event)=>{
             const statusVal = event.target.value;
             console.log("status is::: ",statusVal);
-            if(statusVal == 1000){
+            if(statusVal === 1000){
                 this.setState({
                     status:statusVal,
                     statusValue:"Draft Order"
                 })
             }
-            if(statusVal == 1100){
+            if(statusVal === 1100){
                 this.setState({
                     status:statusVal,
                     statusValue:"Created"
                 })
             }
-            if(statusVal == 3700){
+            if(statusVal === 3700){
                 this.setState({
                     status:statusVal,
                     statusValue:"Shipped"
                 })
             }
-            if(statusVal == ""){
+            if(statusVal === ""){
                 this.setState({
                     status:"",
                     statusValue:"All"
@@ -234,7 +220,9 @@ export default class orderSearch extends Component{
             })
         }
         updateModal(isVisible) {
-            this.state.isVisible = isVisible;
+            this.setState({
+                 isVisible : isVisible
+            })
           this.forceUpdate();
         }
         render(){

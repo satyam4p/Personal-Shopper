@@ -1,56 +1,22 @@
-import React, { useState, Component } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
   NavbarBrand,
   Card,
-  CardBody,
+
   Button,
   Row,
-  Col
+
 } from 'reactstrap';
-import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import '../../App.css';
 import Routes from '../../route';
 import './navbar.css';
 import RabbitLogo from '../../images/logo.png';
-import OrderSearch from '../OrderSearch/OrderSearchScr';
+
 import { MdPowerSettingsNew } from 'react-icons/md';
 
-
-const callThis = () => {
-
-  var postObject = { "CommandName": "getItemList" };
-  postObject.InputXml = {
-    "EnterpriseCode": "S-MART",
-    "ItemKey": "201911061724411388"
-  };
-
-  postObject.Template = {};
-  postObject.IsService = "N";
-
-  //console.log(window.AppInfo.bridgecsrftoken);
-
-  const reqData = {
-    method: "POST",
-    url: `/Rabbit/proxy/service/Httpinvoke`,
-    data: JSON.stringify(postObject),
-    headers: {
-      "Content-Type": "application/json",
-      "X-CSRFToken": window.AppInfo.bridgecsrftoken
-    }
-
-
-  }
-
-  axios(reqData).then(res => {
-    console.log("api called");
-    const response = res.data;
-    console.log("the response is: ", response);
-    console.log("itemlist: ", response.Item);
-  })
-}
 function NavbarComponent(props) {
 
 
@@ -66,7 +32,7 @@ function NavbarComponent(props) {
   // var loggedInUser = window.AppInfo.loginid;
   // console.log("loginId: ",loggedInUser);
   const loginid = "saurabh";
-  if (loginid == "saurabh") {
+  if (loginid === "saurabh") {
     return (
       <div className="NavbarClass">
 
@@ -87,12 +53,12 @@ function NavbarComponent(props) {
             </NavbarBrand>
             <NavbarBrand className="secondBrand">
 
-              <div className="logoDiv"><img className="rabbitLogo" src={RabbitLogo} /></div>
+              <div className="logoDiv"><img className="rabbitLogo" src={RabbitLogo} alt=""/></div>
 
             </NavbarBrand>
 
             <NavbarBrand className="secondBrand" style={{ paddingRight: "10px" }} href='/Rabbit'>
-                <div className="logoDiv" className="float-right">
+                <div className="logoDiv float-right" >
                   <MdPowerSettingsNew size="60" style={{ paddingTop: "8px" }} /><br />
                   <div><p style={{ fontSize: "12px" }}>LOG OUT</p></div>
                 </div>
@@ -157,7 +123,7 @@ function NavbarComponent(props) {
         </NavbarBrand>
 
         <NavbarBrand className="secondBrand" style={{ paddingRight: "10px" }} href='/Rabbit'>
-                <div className="logoDiv" className="float-right">
+                <div className="logoDiv float-right" >
                   <MdPowerSettingsNew size="60" style={{ paddingTop: "8px" }} /><br />
                   <div><p style={{ fontSize: "12px" }}>LOG OUT</p></div>
                 </div>

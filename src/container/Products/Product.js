@@ -4,7 +4,6 @@ import axios from 'axios';
 import {Row,Col,Button,Input,Card, Container,Table} from 'reactstrap';
 import {connect} from 'react-redux';
 import * as actionTypes from '../../redux/Product/action'
-import { useHistory } from "react-router-dom";
 import './products.css';
 import {MdReorder,MdViewModule} from 'react-icons/md';
 
@@ -28,14 +27,12 @@ class ProductContainer extends Component {
             },
             
             ApiName: "getItemList",
-            // ApiName:"PSUpdateDraftOrder",
             IsService: "N"
         }
         const ent = JSON.stringify(data.EnterpriseCode);
         console.log(ent);
         const reqData = {
             method:"POST",
-            //url:`http://localhost:5000/api`,
             url: `http://207.148.123.221:5000/api`,
             data:JSON.stringify(data),
             headers:{
@@ -48,15 +45,14 @@ class ProductContainer extends Component {
         this.setState({
             ItemList:itemList
         })
-        {  this.props.onIncBtnClick(res.data.Item)
-        }
+        this.props.onIncBtnClick(res.data.Item);
         
     })
 }
 loadItems = () => {
     console.log("Item in state are: ",this.state.Item);
     console.log("Itemlist instate are: ",this.state.ItemList);
-    if(this.state.Item.length!=0){
+    if(this.state.Item.length!==0){
         return this.state.Item.map((Itemid,index) => {
             const {ItemID,ItemKey} = Itemid
             return(
@@ -110,7 +106,7 @@ changeView=()=>{
     
 }
 showProducts=()=>{
-        if(this.state.Item.length!=0){
+        if(this.state.Item.length!==0){
             return this.state.Item.map((Itemid,index) => {
                 const {ItemID,ItemKey} = Itemid
                 return(
@@ -133,7 +129,7 @@ showProducts=()=>{
         }
 }
 renderTableRows=()=>{
-    if(this.state.Item.length!=0){
+    if(this.state.Item.length!==0){
         return this.state.Item.map( (Item, index) => {
             return(
                 <tr className="tableRows" style={{lineHeight:".20 !important"}} key={index}>
@@ -142,8 +138,8 @@ renderTableRows=()=>{
                     <td>{Item.UnitOfMeasure}</td>
                     <td>{Item.PrimaryInformation.UnitCost}$</td>
                     <td>{Item.PrimaryInformation.ShortDescription}</td>
-                    <td>{  Item.ItemID == "100122" || Item.ItemID == "100005" || Item.ItemID == "100003" || Item.ItemID == "100013" || Item.ItemID == "100014" 
-                    || Item.ItemID == "100019" || Item.ItemID == "100132" ||Item.ItemID == "100151" ? <p style={{color:"red"}}>Out of Stock</p> : <p style={{color:"green"}}>InStock</p>}</td>
+                    <td>{  Item.ItemID === "100122" || Item.ItemID === "100005" || Item.ItemID === "100003" || Item.ItemID === "100013" || Item.ItemID === "100014" 
+                    || Item.ItemID === "100019" || Item.ItemID === "100132" ||Item.ItemID === "100151" ? <p style={{color:"red"}}>Out of Stock</p> : <p style={{color:"green"}}>InStock</p>}</td>
                 </tr>
                 )
                 
@@ -160,8 +156,8 @@ else{
             <td>{Item.PrimaryInformation.UnitCost}$</td>
             <td>{Item.PrimaryInformation.ShortDescription}</td>
             <td>{Item.OrganizationCode}</td>
-            <td>{  Item.ItemID == "100122" || Item.ItemID == "100005" || Item.ItemID == "100003" || Item.ItemID == "100013" || Item.ItemID == "100014" 
-    || Item.ItemID == "100019" || Item.ItemID == "100132" ||Item.ItemID == "100151" ? <p style={{color:"red"}}>Out of Stock</p> : <p style={{color:"green"}}>InStock</p>}</td>
+            <td>{  Item.ItemID === "100122" || Item.ItemID === "100005" || Item.ItemID === "100003" || Item.ItemID === "100013" || Item.ItemID === "100014" 
+    || Item.ItemID === "100019" || Item.ItemID === "100132" ||Item.ItemID === "100151" ? <p style={{color:"red"}}>Out of Stock</p> : <p style={{color:"green"}}>InStock</p>}</td>
         </tr>
         )
         
@@ -216,7 +212,7 @@ renderTableData=()=>{
         <Container fluid={true}>
             <div >
                     <Card style={{marginTop:"10px",alignSelf:"center",width:"90%",marginLeft:"70px"}}>
-                    {this.state.listview==false ? <Row md="4">{this.showProducts()}</Row>: this.renderTableData()}
+                    {this.state.listview===false ? <Row md="4">{this.showProducts()}</Row>: this.renderTableData()}
                    
                     </Card>
                     </div> 

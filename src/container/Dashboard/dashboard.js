@@ -1,22 +1,11 @@
 import React, { Component } from 'react';
-import { Container,Card,CardBody,CardText, Row, Col} from 'reactstrap';
-import StyleRecomendations from '../../components/dashboard/styleRecomendation';
-import MyTasks from '../../components/dashboard/myTasks';
-import MyMessages from '../../components/dashboard/myMessages';
-import InventoryMatrics from '../../components/dashboard/inventorymatrics';
-import OrderFullfillment from '../../components/dashboard/orderFullfillment';
-import NewArrival from '../../components/dashboard/newArrival';
-import NotificationsAndActions from '../../components/dashboard/notificationsAndActions';
-import RecentCustomers from '../../components/dashboard/recentCustomers';
+import { Container,Card,CardBody, Row, Col} from 'reactstrap';
 import Notification from '../../components/dashboard/Notification';
 import Messages from '../../components/dashboard/Messages';
 import Summary from '../../components/dashboard/Summary';
 import OrderDetails from '../../components/dashboard/OrderDetailsDashboard';
 import ItemDetails from '../../components/dashboard/ItemDetails';
 import CustomerList from '../../components/dashboard/CustomerList';
-
-
-import PopularProducts from '../../components/dashboard/popularProducts';
 
 class Dashboard extends Component {
     constructor(props){

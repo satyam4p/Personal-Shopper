@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import {Card,CardBody,Input,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container,CardHeader, CardColumns, CardImg} from 'reactstrap';
-import MyChart from './BarChart';
+import {Card,CardBody,Input,CardText,Button,Row,Col,CardHeader, CardImg} from 'reactstrap';
 import './dashboard.css';
-import {NavLink,Route,Switch,BrowserRouter as Router} from 'react-router-dom';
 import axios from 'axios';
 import img from './images/image1.png';
-import {MdAddShoppingCart,MdRemoveShoppingCart,MdSearch} from 'react-icons/md';
+import {MdAddShoppingCart} from 'react-icons/md';
 
 
 
@@ -71,8 +69,8 @@ class OrderDetails extends Component {
         //  console.log("ItemDetails from the itemdetail component is:::: ",this.props.ItemDetail);
          console.log("CurrentOrderlines are:::",currentOrderLines.length);
          console.log("OrderCreatedFlag:::",this.state.orderCreatedFlag);
-         if(this.state.orderCreatedFlag==false){
-         if(currentOrderLines.length==0){
+         if(this.state.orderCreatedFlag===false){
+         if(currentOrderLines.length===0){
               const NewPrimeLineNo = "1";
              const CustomOrderLine = {
                 OrderedQty: "1",
@@ -245,9 +243,9 @@ class OrderDetails extends Component {
 
     mapProducts =() =>{
         console.log("the product list is::: ",this.state.productList);
-        if(this.state.descriptionList.length!=0){
+        if(this.state.descriptionList.length!==0){
             return this.state.descriptionList.map((Item,index)=>{
-                const {ItemID,UnitOfMeasure} = Item
+                const {ItemID} = Item
                 return(
                     <Card style={{marginBottom:"5px"}}>
                     <CardHeader className="CardHeaderClassWide10" >
@@ -273,7 +271,7 @@ class OrderDetails extends Component {
         }
         else{
             return this.state.productList.map((Item,index)=>{
-                const {ItemID,UnitOfMeasure} = Item
+                const {ItemID} = Item
                 return(
                     <Card style={{marginBottom:"5px"}}>
                     <CardHeader className="CardHeaderClassWide10" style={{fontWeight:"700"}}>

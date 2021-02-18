@@ -1,18 +1,13 @@
 
 import {
-    all,
     call,
-    fork,
     put,
-    take,
     takeEvery,
-    delay
   } from "redux-saga/effects";
   import axios from 'axios';
   
   
   const fetchData = () => {
-    const {orders}  = this.props.location.state;
         console.log("asd ",this.props)
         const key = window.location.search;
         const params = new URLSearchParams(key);
@@ -63,17 +58,7 @@ import {
         console.log("response: ",response);
     yield put({type: 'DATA',payload:response})
   }catch (error) {
-    let message;
-    switch (error.status) {
-      case 500:
-        message = "Internal Server Error";
-        break;
-      case 401:
-        message = "Invalid credentials";
-        break;
-      default:
-        message = error;
-    }
+    console.log(error);
   }
   }
   

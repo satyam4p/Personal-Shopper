@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container, Pagination} from 'reactstrap';
+import {Card,CardBody,CardTitle,Button,Row,Col} from 'reactstrap';
 import bell from '../../components/dashboard/images/bell.png';
 import btn from '../../components/dashboard/images/btn.png';
 import pencil from '../../components/dashboard/images/pencil.png';
@@ -42,7 +42,7 @@ class NotificationAndActions extends Component {
           
             <Card className="styleRecomend">
                 <CardBody >
-                <CardTitle className="title"><img className="imgSize" src={bell}/><b> NOTIFICATIONS & ACTIONS</b></CardTitle>
+                <CardTitle className="title"><img className="imgSize" src={bell} alt=""/><b> NOTIFICATIONS & ACTIONS</b></CardTitle>
                 &nbsp;
                 &nbsp;
                 &nbsp;
@@ -71,15 +71,15 @@ class NotificationAndActions extends Component {
                <Row xs="3">
                  <Col>
                
-                <Button color="primary"><img className="btnGrp" src={btn}></img></Button> 
+                <Button color="primary"><img className="btnGrp" src={btn} alt=""></img></Button> 
                 <p>NEW STYLE</p>
                 </Col>
                  <Col>
-                <Button color="primary"><img className="btnGrp" src={pencil}></img></Button>  
+                <Button color="primary"><img className="btnGrp" src={pencil} alt=""></img></Button>  
                <p>EDIT STYLE</p>    
                </Col>
                  <Col> 
-                <Button color="primary"><img className="btnGrp" src={msgs}></img></Button>    
+                <Button color="primary"><img className="btnGrp" src={msgs} alt=""></img></Button>    
                <p>INVITE USER  </p>
                 </Col>
                 </Row>

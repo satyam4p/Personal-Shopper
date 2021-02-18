@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Card,CardBody,CardTitle,CardText,CardSubtitle,Badge ,Button,Row,Col,Container,CardHeader} from 'reactstrap';
-import MyChart from './BarChart';
+import {Card,CardBody,CardSubtitle,Badge,CardHeader} from 'reactstrap';
 import './dashboard.css';
 import {TiShoppingCart} from 'react-icons/ti';
 import {Link} from 'react-router-dom';

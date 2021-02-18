@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react'
 import NavbarComponent from './components/navbar/navbar';
-import {NavLink,Route,Switch,BrowserRouter } from 'react-router-dom';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';

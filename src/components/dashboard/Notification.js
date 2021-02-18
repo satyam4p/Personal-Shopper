@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import {Card,CardImg,CardBody,CardTitle,CardText,CardSubtitle,Button,Row,Col,Container,CardHeader} from 'reactstrap';
-import MyChart from './BarChart';
+import {Card,CardImg,CardBody,CardText,CardHeader} from 'reactstrap';
 import './dashboard.css';
 import axios from 'axios';
 import ConfirmedOrder from "./images/ConfirmedOrder.jpg";
 import RequestModification from "./images/RequestModification.jpg";
 import SignedUp from "./images/SignedUp.jpg";
 import DefaultNotification from "./images/DefaultNotification.jpg";
-import {NavLink,Route,Switch,BrowserRouter as Router} from 'react-router-dom';
 
 class Notification extends Component {
     constructor(props){

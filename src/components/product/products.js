@@ -1,13 +1,12 @@
 import React,{Component} from 'react';
-import { Container, Row, Col, CardHeader} from 'reactstrap';
+import {  Row, Col, CardHeader} from 'reactstrap';
 import '../styleGroups/styleGroupCard.css';
-import {Button, ButtonGroup,Input,Jumbotron,Card,CardImg,
-     CardBody,CardTitle,CardSubtitle,CardText,CardLink,CardGroup} from 'reactstrap';
+import {Card,CardImg,
+     CardBody,CardSubtitle,CardText} from 'reactstrap';
 
 // import StyleGroupName from './StyleGroupNames';
 // import GroupPrice from './GroupPrice';
 import image from './images/image1.png';
-import editLogo from './images/edit.png';
 export default class Products extends Component{
     constructor(props){
         super(props);
@@ -45,9 +44,9 @@ export default class Products extends Component{
 
                     <CardSubtitle className="ProductsCardSubTitle">Availability</CardSubtitle><CardSubtitle style={{color:"blueviolet",textAlign:"left"}}>{
 
-                          this.props.itemid == "100122" || this.props.itemid == "100005" || this.props.itemid == "100003" || this.props.itemid == "100014" || this.props.itemid == "100013" 
-                        || this.props.itemid == "100019" || this.props.itemid == "100132" || this.props.itemid == "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle>
-                    {/* <ProductsComp ItemID = {this.props.itemid}/>  */}
+                          this.props.itemid === "100122" || this.props.itemid === "100005" || this.props.itemid === "100003" || this.props.itemid === "100014" || this.props.itemid === "100013" 
+                        || this.props.itemid === "100019" || this.props.itemid === "100132" || this.props.itemid === "100151" ? <p style={{color:"red"}}>Out Of Stock</p> : <p style={{color:"green"}}>InStock</p>}</CardSubtitle>
+                    {/* <ProductsComp ItemID == {this.props.itemid}/>  */}
                     {/* <GroupPrice/> */}
                     {/* <img className="styleCardEditButton" src={editLogo}/> */}
                     </CardBody>

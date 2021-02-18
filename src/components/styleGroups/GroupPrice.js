@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './styleGroupCard.css';
-import {Card,CardText,CardSubtitle} from 'reactstrap';
+import {CardText,CardSubtitle} from 'reactstrap';
 
 export default class GroupPrice extends Component{
 

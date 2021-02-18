@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Card,CardText,CardTitle,CardDeck} from 'reactstrap';
+import {Card} from 'reactstrap';
 
 
 export default class ItemDetails extends Component{

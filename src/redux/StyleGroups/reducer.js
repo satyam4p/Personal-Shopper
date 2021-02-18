@@ -1,5 +1,4 @@
-import * as actionTypes from './action'
-import { render } from '@testing-library/react';
+
 
 const initalState={
     ItemList:[]
@@ -7,7 +6,7 @@ const initalState={
 const reducer =(state=initalState ,action)=>{
 
             console.log("inside reducer");
-            if(action.type=="DATA"){
+            if(action.type==="DATA"){
                 console.log("inside ifff");
                
             const len = action.payload.length;
