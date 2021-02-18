@@ -58,7 +58,7 @@ function* fetchSubscriptionData(){
       console.log(error);
   }
 }
-}
+
 
 
  export default function* watchAddData(){
