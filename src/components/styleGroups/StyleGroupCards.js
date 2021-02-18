@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
-import { Container, Row, Col} from 'reactstrap';
+import {  Row, Col} from 'reactstrap';
 import './styleGroupCard.css';
-import {Button, ButtonGroup,Input,Jumbotron,Card,CardImg,
-     CardBody,CardTitle,CardSubtitle,CardText,CardLink,CardGroup} from 'reactstrap';
+import {Card,CardImg,
+     CardBody,CardTitle,CardSubtitle} from 'reactstrap';
 import ProductsComp from './Products';
 import StyleGroupName from './StyleGroupNames';
 import GroupPrice from './GroupPrice';
@@ -12,9 +12,7 @@ import editLogo from './images/edit.png';
 
  
 export default class StyleGroupTypes extends Component{
-    constructor(props){
-        super(props);
-    }
+
 
     render(){
         return(
@@ -34,7 +32,7 @@ export default class StyleGroupTypes extends Component{
                     <CardSubtitle className="ProductsCardSubTitle">Product</CardSubtitle>
                     <ProductsComp ItemID = {this.props.itemid}/> 
                     <GroupPrice/>
-                    <img className="styleCardEditButton" src={editLogo}/>
+                    <img className="styleCardEditButton" src={editLogo} alt=""/>
                     </CardBody>
                 </Card>
                 </Col>

@@ -7,9 +7,6 @@ import {connect} from 'react-redux'
 import * as actionTypes from '../../redux/StyleGroups/action';
 
   class StyleGroups extends Component {
-    constructor(props){
-        super(props); 
-    }
     state = {
         ItemList:[]
     }
