@@ -1,5 +1,5 @@
 import React,   {Component} from 'react';
-import { Container, Row, Col} from 'reactstrap';
+import { Container, Row, Col,Input} from 'reactstrap';
 import '../../components/styleGroups/styleGroupCard.css';
 import {Button} from 'reactstrap';
 import StyleGroupCards from '../../components/styleGroups/StyleGroupCards';
