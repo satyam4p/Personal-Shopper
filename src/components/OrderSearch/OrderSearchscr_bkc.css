@@ -1,0 +1,163 @@
+.headerCard{
+    width: 100%;
+    text-align: left;
+    height: 50px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
+}
+.headerCard h2{
+    margin-top: 10px;
+    font-size: 23px;
+    font-family: IBM Plex Sans;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    font-weight:800;
+}
+
+.HeaderDiv{
+ 
+    font-family: sans-serif;    
+    background-color:aqua   ;
+   
+}
+
+.tableHeaderCard {
+    background-color: rgba(95,39,205,0.05);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    font-size: 1rem;
+}
+
+.tableRows{
+    line-height: .95;
+    padding: 9px 15px 9px 15px !important;
+} 
+
+.searchBoxCard{
+ 
+    margin-top: 25px;
+    width: inherit;
+   
+}
+.searchDiv{
+    float: left;
+}
+.inputgroupdiv{
+   margin-top: 5px;
+    width:80%;
+    float: left;
+}
+.SubmitButton{
+    float: left;
+    background-color: white;
+    
+}
+.OrderNoLAbel{
+    padding-top: 5px;
+    float: left;
+    height: 10px;
+    color:blueviolet;
+}
+.SearchForm{
+    margin-left: 20px;
+}
+.StatusLabel{
+    float: left;
+    height: 10px;
+}
+.StatusDiv{
+    width:50%;
+    float: left;
+}
+.TableCard{
+    margin-top: 25px;
+    align-self: center;
+    border-radius: 5px;
+    font-size: 15px;
+    max-height: 480px;
+    overflow-y: auto;
+    margin-left: 40px;
+}
+/* .tableHeader{ 
+/* background-color: darkcyan; */
+/* color:black; */
+
+/* border-radius: 5px; */
+
+
+/* } */ 
+Table {
+    border-collapse: collapse;
+  
+}
+tr { border: none; }
+td {
+  border-right: solid 1px rgb(224, 215, 215); 
+  border-left: solid 1px rgb(224, 215,215);
+}
+
+.tableRows{
+    background-color: rgba(226, 222, 222, 0.205);
+    text-align: left;
+    color: #707070;
+    font:12px;
+    border-top: 1px solid #dee2e6;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(222, 226, 230);
+}
+.tableData{
+    text-align: left;
+    color:#7f52d6 ;
+}
+
+.tableHeaderCard{
+    width: 100%;
+    text-align: left;
+    color:black;
+    border-radius: 5px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+.DropDownItem{
+    color: blueviolet;
+    font-size: medium;
+}
+.StatusLabel{
+    color: blueviolet;
+    
+}
+.EnterpriseCodeLabel{
+    padding-top: 5px;
+    float: left;
+    height: 10px;
+    color:blueviolet;
+}
+.CustomerIDLabel{
+    padding-top: 5px;
+    float: left;
+    height: 10px;
+    color:blueviolet;  
+}
+.CloseButton{
+    float: right;
+    margin-right: 20px;
+    background-color: white;
+}
+
+ .SubmitButton {
+    border-color: #5F27CD;
+    color: #5F27CD;
+    background-color: rgb(235, 223, 247);
+    display: inline-block;
+    height: 2rem;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 450;
+    text-align: center;
+    font-family: IBM Plex Sans;
+    text-transform: uppercase;
+} 

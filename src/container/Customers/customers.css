@@ -1,0 +1,32 @@
+.toolCard{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.itemsCard{
+  padding-top: 5px;
+  margin-top: 10px;
+}
+.StyleCard{
+  margin-top:10px ;
+  margin-left: 10px;
+  width: 250px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* background-color: rgba(239, 231, 247, 0.932); */
+  font-size: 15px;
+}
+
+.StyleGroupTitle{
+  color: white;
+  background-color:rgba(4,71,132)!important; 
+}
+
+toolCard h2 {
+font-family:  IBM Plex Sans;
+font-size: 25px;
+position: sticky;
+position: -webkit-sticky;
+text-align: left;
+font-family: IBM Plex Sans;
+/* font-size: 23px; */
+font-weight: 800;
+}  

@@ -1,0 +1,55 @@
+.menu{
+    width: 35px;
+    height: 6px;
+    background-color: black;
+    margin: 6px 0;
+    
+  }
+  .btnClass{
+  margin-right: 10px;
+  width: 200px;
+  
+  }
+  
+   .paragraph{
+     text-align: justify;
+   }
+ 
+.title{
+    text-align: left;
+   }
+.MyMessageClass{
+  height: 200px;
+}
+.scrollClass{
+  overflow-x: hidden; 
+  overflow-x: auto; 
+  text-align:justify;
+}
+.RowOne{
+  padding: 4px 4px 4px 4px;
+}
+.CardText{
+  text-align: left;
+}
+.top{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.imgSize{
+  height: 25px;
+  width: 25px;
+}
+.prodImg{
+  height: 50px;
+  width: 50px;
+}
+.btnGrp{
+  height: 40px;
+  width: 40px;
+}
+.borderDiv{
+  border-right:1px solid dimgrey;
+}
+.borderTop{
+  border-top:1px solid gray;
+}

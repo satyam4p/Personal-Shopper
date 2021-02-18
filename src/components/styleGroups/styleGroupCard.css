@@ -1,0 +1,65 @@
+.cardsDiv{
+    margin:4px;
+}
+.StyleGrpNameSubTitle{
+   margin-top: 3px !important;
+   text-align: left;
+}
+.ProductsCardSubTitle{
+    margin-top: 3px !important;
+    text-align: left;
+    font-family: sans-serif;
+}
+.StyleGroupDiv{ 
+    text-align: left;
+}
+.ProductCardsDiv{
+    text-align: left;
+}
+.StyleCard{
+    width: 250px; 
+}
+.StyleGroupCardText{
+    color: blue;
+    font-family: sans-serif;
+}
+.ProductCardsText{
+    color: blue;
+    font-family: sans-serif;
+}
+.cardDiv{
+    
+}
+.StyleCardImg{
+    float: right;
+    width: 40% !important;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+.groupPriceDiv{
+    margin-top: 15px;
+    text-align: left;
+    font-family: sans-serif;
+}
+.styleGroupEdit{
+    float: right;
+    width: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.StyleGroupSubTitleDiv{
+    margin-bottom: -20px;
+    font-family: sans-serif;
+    font-weight: 525;
+}
+.StyleGroupTitle{
+    font-weight: bold ;
+    font-family: sans-serif;
+    height: 10%;
+}
+.styleCardEditButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    float: right;
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}

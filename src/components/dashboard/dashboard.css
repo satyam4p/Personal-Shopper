@@ -1,0 +1,149 @@
+.menu{
+    width: 35px;
+    height: 6px;
+    background-color: black;
+    margin: 6px 0;
+    
+  }
+  .btnClass{
+  /* margin-right: 10px; */
+  margin: auto;
+  width: 100px;
+  
+  }
+  
+   .paragraph{
+     text-align: justify;
+   }
+ 
+.title{
+    text-align: left;
+    font-family:  IBM Plex Sans;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(4, 80, 4);
+   }
+
+.BrowseProductsClass{
+  max-height: 350px;
+  overflow-y: auto;
+}
+.CardHeaderClassWide{
+  font-family: IBM Plex Sans;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background-color:rgba(4,71,132) !important; 
+  height: 42px;
+  border:1px solid rgba(17, 75, 32, 0.125);
+  top: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 1;
+}
+
+.CardHeaderClassWide  p {
+  text-align: left;
+}
+
+.horizontal-list{
+  font-size: large;
+}
+
+.MyMessageClass{
+  height: 200px;
+}
+.scrollClass{
+  overflow-x: hidden; 
+  overflow-x: auto; 
+  text-align:justify;
+}
+.RowOne{
+  padding: 3px 3px 4px 4px;
+}
+.Card {
+  box-shadow: 5px 5px 5px rgba(121, 104, 104, 0.445);
+  box-sizing: content-box;
+  border-radius: .5rem ;
+}
+.CardText{
+  text-align: left;
+  font-family: IBM Plex Sans;
+  margin-bottom: 5rem;
+  position: relative;
+  margin-top: 2rem; 
+}
+
+.top{
+  font-family:Georgia, 'Times New Roman', Times, serif; 
+  margin-left:1.2rem;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  /* Rue gilt font */
+}
+.imgSize{
+  height: 25px;
+  width: 25px;
+}
+.prodImg{
+  height: 50px;
+  width: 50px;
+}
+.btnGrp{
+  height: 10px;
+  width: 20px;
+}
+.borderDiv{
+  border-right:1px solid dimgrey;
+}
+.borderTop{
+  border-top:1px solid gray;
+}
+.ProductImage{
+  width: 90% !important;
+  height: 70% !important;
+  align-self: right;
+}
+.AddProductButton{
+  background-color:green !important;
+  color: white !important;
+  margin-right: 3px;
+  width: inherit;
+}
+
+.TrendingItemListClass{
+  max-height: 350px;  
+  overflow-y: auto;
+}
+.CardHeaderClassWide10{
+  height: 32px;
+  font-family:  IBM Plex Sans;
+  background-color: rgba(56, 234, 247, 0.37)  !important;
+  
+}
+.CardHeaderClassWide10 p {
+  text-align: left;
+  color: rgb(4,71,132);
+  font-weight: 600;
+  font-size: 16.5px;
+  /* vertical-align: middle; */
+}
+
+.horizoontalLine{
+  width: 95%;
+}
+.customerListCard{
+  overflow-y: auto;
+  max-height: 800px;
+}
+.ActiveCard{
+  background-Color: rgb(229, 229, 229);
+  box-shadow: 5px 5px 5px rgba( 121, 104, 104, 104.445);
+  outline: 2px solid darkorchid;
+}
+.CardInactive{
+  /* background-Color: rgb(229, 229, 229); */
+}
+
+

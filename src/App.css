@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+.menu{
+  width: 35px;
+  height: 6px;
+  background-color: black;
+  margin: 6px 0;
+  
+}
+.btnClass{
+margin-right: 10px;
+width: 200px;
+
+}
+.rightCard{
+ width: 25%;
+ background: rgb(92, 90, 90);
+}
+.leftCard{
+  width: 75%;
+  background: rgb(92, 90, 90);
+ }

@@ -1,0 +1,41 @@
+
+.header{
+    text-align: left;
+    font-size: 10px  !important;
+}
+
+.ADDBtn{
+    margin-left:2px;
+  margin-right: 2px; 
+}
+.ListBtn{
+    float: right;
+   padding: 3px 10px  !important;
+   margin: 2px;
+   margin-right: 20px;
+}
+.UploadBtn{
+  margin-left:2px;
+  margin-right: 2px;
+}
+.vl {
+   border: 0px solid black;
+  }
+  .searchBox{
+      width: 15% !important; 
+      height: 3% !important;
+      float: right;
+  }
+  .jumbotronDiv{
+    /* border: 1px solid grey; */
+    border: 1px solid grey;
+    margin:20px;
+
+  }
+  .ulNavBar{
+      margin-top: 3px;
+  }
+  .navbarClass{
+    display: inline;
+  }
+  

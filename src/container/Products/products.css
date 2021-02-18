@@ -1,0 +1,36 @@
+.toolCard{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    background-color:rgba(4,71,132)!important; 
+}
+.itemsCard{
+    padding-top: 5px;
+    font-size: 15px;
+}
+.StyleGroupSubTitleDiv,.ProductsCardSubTitle {
+    font-family:  IBM Plex Sans;
+    font-size: 17px;
+}
+.StyleGroupTitle{
+    text-align: left;
+    color:rgba(4,71,132);
+  background-color:rgba(56, 234, 247, 0.37)!important;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.ButtonClass10 {
+    border-color: rgba(4,71,132);
+    color: rgb(19, 49, 77);
+    background-color: rgb(205, 237, 248)!important;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 15px;
+    /* font-weight: 450; */
+    text-align: center;
+    font-family: IBM Plex Sans;
+    /* size: 10rem; */
+    height: 2.7rem;
+    /* text-transform: uppercase; */
+}

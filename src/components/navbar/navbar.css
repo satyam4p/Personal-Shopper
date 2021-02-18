@@ -1,0 +1,54 @@
+.navlinkClass{
+    text-decoration: none;
+    
+        font-weight: "bold";
+        color:"black";
+        padding-top:"10px";
+        padding-bottom:"10px";
+        padding-right:"15px";
+        padding-left:"50px";
+        border:"1px solid black";
+    }
+.rabbitLogo{
+    width:80px;
+    height: 80px;
+
+}
+.logoDiv{
+    float: right;
+}
+.secondBrand{
+    float: right;
+}
+.commmonDiv{
+    width: 100%;
+}
+.brandOne{
+    float: left;
+}
+
+.horizontal-list{
+    margin-top: 10px;
+    margin-right: 0px;
+}
+.horizontal-list li{
+    display: inline; 
+ 
+}
+/* .menuCard{
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+} */
+.table>ul>li {
+    /* margin-left: 1.5rem;
+    margin-right: 11.5rem; */
+    margin: 102px;
+    font-weight: 470;
+}
+
+.menuRow{
+    margin-top: -10px;
+    
+}

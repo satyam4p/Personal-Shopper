@@ -1,0 +1,306 @@
+.OrderDetailsHeader{
+        width: 100%;
+        
+        height: 50px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+       background-color:rgba(4,71,132)!important;
+      
+}
+
+.OrderNoHead{
+    float: left;
+    font-family: sans-serif;
+    color: Black;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: large;
+    
+}
+
+.statusDiv{
+    float: left;
+    margin-left: 20px;
+    display: inline;
+}
+.statusDiv h3{
+    font-size: 20px;
+    float: left;
+    margin-right: 40px;
+   
+}
+.OrderDetails{
+float: left !important;
+width: 100%;
+background-color: rgba(226, 222, 222, 0.205);
+
+}
+.CardHeaderDetails{
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    font-weight: 600;
+    height: 35px;
+    justify-content: space-around;
+    border:1px solid rgba(17, 75, 32, 0.125);
+  background-color:rgb(4,71,132)!important;
+    margin-bottom: 0;
+    
+}
+
+.CardHeaderDetails > p {
+    position: relative;
+    bottom: 10px;
+    text-align: left;
+    color: white;
+}
+
+ .CardHeaderProductDetails{
+    font-family: IBM Plex Sans;
+    position: sticky;
+    font-size: 20px;
+    font-weight: 600;
+    height: 55px;
+    z-index: 2;
+    justify-content: space-around;
+    border:1px solid rgba(17, 75, 32, 0.125);
+    color:white;
+  background-color:rgb(4,71,132) !important;
+    text-align: left;
+    top: 0;
+  
+} 
+
+.ButtonClass {
+    border-color: rgba(4,71,132);
+    color: rgb(19, 49, 77);
+    background-color: rgb(205, 237, 248)!important;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 15px;
+    /* font-weight: 450; */
+    text-align: center;
+    font-family: IBM Plex Sans;
+    /* size: 10rem; */
+    height: 2rem;
+    /* text-transform: uppercase; */
+ }
+
+.details{
+    display: inline;
+}
+.detailsCard{
+    font-size: 15px;
+    outline: hidden;
+    background-color: ghostwhite;
+    /* padding-block-end: 60px; */
+    /* margin-left: 10px; */
+    max-height: 75%;
+   
+    font-family:  IBM Plex Sans;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.ItemDetailsCard{
+    background-color: ghostwhite;
+    max-height: 390px;
+    overflow-y: auto;
+    margin-top: 8px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.ItemImage{
+        float: right;
+        /* width:  !important; */
+        width: 70%;
+        align-self: center;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        margin-left: 4px;
+        margin-bottom: 4px;
+        margin-right: 23px;
+        
+}
+.ProductsCard{
+    max-height: 390px;
+    overflow-y: scroll;
+    margin-top: 8px;
+   
+    background-color: ghostwhite;
+}
+.searchProducts{
+    display: inline-block;
+    width: auto;
+    
+
+}
+.btn:hover {
+   /* background-color: rgba(100, 109, 228, 0.678); */
+   background-color: rgba(4,71,132);
+}
+.btn{
+    color: rgba(4,71,132);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+.mainDiv{
+  background-color: white;
+}
+.surveyDetails{
+    /* background-color: rgba(226, 222, 222, 0.205); */
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    overflow-y: auto;
+    max-height: 400px;
+}
+.PopupClass{
+    border-radius: 40px;
+    background-color: rgba(243, 164, 164, 0.747);
+}
+.popupText{
+    align-self: center;
+    border-radius: 5px;  
+    border: none; 
+    background-color: rgba(252, 73, 73, 0.747);
+    width: inherit;
+    justify-content: center;
+}
+.popupText2{
+    align-self: center;
+    border-radius: 5px;
+    border: none; 
+    background-color: rgba(6, 236, 178, 0.342);
+    width: inherit;
+    justify-content: center;
+}
+
+.OrderDetailsHeader{
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    
+  
+}
+.OrderDetailsHeader h2{
+margin-top: 10px;
+padding-left: 15px;
+/* color: blueviolet; */
+/* font-size: 20px; */
+position: sticky;
+position: -webkit-sticky;
+text-align: left;
+font-family: IBM Plex Sans;
+font-size: 18px;
+font-weight: 800;
+color: white;
+}
+.OrderNoHead{
+float: left;
+font-family: sans-serif;
+color: Black;
+font-weight: bold;
+margin-left: 5px;
+font-size: large;
+
+}
+.statusDiv{
+float: left;
+margin-left: 20px;
+display: inline;
+}
+.statusDiv h3{
+font-size: 20px;
+float: left;
+margin-right: 40px;
+
+}
+.OrderDetails{
+float: left !important;
+width: 100%;
+/* background-color: rgba(226, 222, 222, 0.205); */
+
+}
+.details{
+display: inline;
+}
+.detailsCard{
+font-size: 15px;
+outline: hidden;
+margin-top: 4px;
+margin-bottom: 4px;
+background-color: ghostwhite;
+padding-block-end: 60px;
+/* margin-left: 10px; */
+
+margin-top: 0;
+}
+
+
+
+.ItemDetailsCard{
+background-color: ghostwhite;
+max-height: 390px;
+overflow-y: auto;
+margin-top: 8px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ItemImage{
+    float: right;
+    /* width:  !important; */
+    width: 70%;
+    align-self: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    margin-left: 4px;
+    margin-bottom: 4px;
+    margin-right: 23px;
+    
+}
+.ProductsCard{
+max-height: 390px;
+overflow-y: scroll;
+margin-top: 8px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color: ghostwhite;
+}
+.searchProducts{
+display: inline-block;
+width: auto;
+
+
+}
+.btn:hover {
+background-color: rgba(100, 109, 228, 0.678);
+}
+.btn{
+color:rgba(4,71,132);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+.mainDiv{
+background-color: ghostwhite;
+}
+.surveyDetails{
+background-color: rgba(226, 222, 222, 0.205);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+overflow-y: auto;
+max-height: 400px;
+}
+.PopupClass{
+border-radius: 40px;
+background-color: rgba(243, 164, 164, 0.747);
+}
+.popupText{
+align-self: center;
+border-radius: 5px;  
+border: none; 
+background-color: rgba(252, 73, 73, 0.747);
+width: inherit;
+justify-content: center;
+}
+.popupText2{
+align-self: center;
+border-radius: 5px;
+border: none; 
+background-color: rgba(6, 236, 178, 0.342);
+width: inherit;
+justify-content: center;
+}
+

@@ -1,0 +1,181 @@
+.headerCard{
+    width: 100%;
+    text-align: left;
+    height: 50px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
+    background-color:rgba(4,71,132)!important; 
+}
+.headerCard h2{
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: IBM Plex Sans;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    font-weight:800;
+    color:white;
+}
+
+.HeaderDiv{
+ 
+    font-family: sans-serif;    
+    /* background-color:aqua   ; */
+   
+}
+
+.tableHeaderCard {
+    background-color: rgba(95,39,205,0.05);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    font-size: 1rem;
+}
+
+.tableRows{
+    line-height: .95;
+    padding: 9px 15px 9px 15px !important;
+} 
+
+.searchBoxCard{
+ 
+    margin-top: 25px;
+    width: inherit;
+   
+}
+.searchDiv{
+    float: left;
+}
+.inputgroupdiv{
+   margin-top: 5px;
+    width:80%;
+    float: left;
+}
+
+.OrderNoLAbel{
+    padding-top: 5px;
+    float: left;
+    height: 10px;
+    color:rgba(4,71,132);
+    font-family:  IBM Plex Sans;
+    font-size: 17px;
+    margin-bottom: 1.19rem;
+}
+.SearchForm{
+    margin-left: 20px;
+}
+.StatusLabel{
+    float: left;
+    height: 10px;
+    font-family:  IBM Plex Sans;
+    font-size: 17px;
+    margin-bottom: 1.19rem;
+    color: rgba(4,71,132)!important;
+ 
+
+}
+.StatusDiv{
+    width:50%;
+    float: left;
+}
+.TableCard{
+    margin-top: 25px;
+    align-self: center;
+    border-radius: 5px;
+    font-size: 15px;
+    max-height: 480px;
+    overflow-y: auto;
+    margin-left: 10px;
+}
+.tableHeader{ 
+    color:rgba(4,71,132);
+    background-color:rgba(56, 234, 247, 0.37)!important;
+ } 
+ 
+Table {
+    border-collapse: collapse;
+  
+}
+tr { border: none; }
+td {
+  border-right: solid 1px rgb(224, 215, 215); 
+  border-left: solid 1px rgb(224, 215,215);
+  font-family:  IBM Plex Sans;
+  font-size: 15px;
+  /* font-weight: 600; */
+}
+
+.tableRows{
+    background-color: rgba(226, 222, 222, 0.205);
+    text-align: left;
+    color: #707070;
+    font:12px;
+    border-top: 1px solid #dee2e6;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(222, 226, 230);
+}
+.tableData{
+    text-align: left;
+    color:rgba(4,71,132) ;
+}
+
+.tableHeaderCard{
+    width: 100%;
+    text-align: left;
+    color:black;
+    border-radius: 5px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+.DropDownItem{
+    color: rgba(4,71,132);
+    font-size: medium; 
+    background-color: white !important;
+}
+
+.StatusLabel{
+    color: rgba(4,71,132);
+    /* font-family:  IBM Plex Sans;
+    font-size: 15px; */
+    
+}
+.EnterpriseCodeLabel{
+    padding-top: 5px;
+    float: left;
+    height: 10px;
+    color:rgba(4,71,132);
+    font-family:  IBM Plex Sans;
+   font-size: 17px;
+   margin-bottom: 1.19rem;
+}
+.CustomerIDLabel{
+    padding-top: 5px;
+    float: left;
+    height: 10px;
+    color:rgba(4,71,132);  
+    font-family:  IBM Plex Sans;
+    font-size: 17px;
+    margin-bottom: 1.19rem;
+}
+.CloseButton{
+    float: right;
+    margin-right: 20px;
+    background-color: white;
+}
+
+ .SubmitButton {
+    border-color: rgba(4,71,132);
+    color: rgba(4,71,132)!important;
+    background-color: rgb(205, 237, 248);
+    display: inline-block;
+    height: 2rem;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 450;
+    text-align: center;
+    font-family: IBM Plex Sans;
+    text-transform: uppercase;
+    float: left;
+} 
