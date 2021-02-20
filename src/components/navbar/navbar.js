@@ -26,7 +26,7 @@ function NavbarComponent(props) {
   //   const BaseName=`/Rabbit/container.jsp?CSRFToken`
   //  const token = window.AppInfo.bridgecsrftoken;
   // const BaseName = `/Rabbit/container.jsp?CSRFToken=${token}`;
-  const BaseName = "personalshopper.netlify.app//RueGilt";
+  const BaseName = "/RueGilt";
   // var loggedInUser = window.AppInfo.loginid;
   // console.log("loginId: ", loggedInUser);
 
