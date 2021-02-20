@@ -82,7 +82,7 @@ class Dashboard extends Component {
     render() { 
         return (
           <Container  fluid={true}>
-                <Card>
+            <Card>
             <CardBody>
             <Row>
                  <Col md="3" style={{paddingLeft:"0px",paddingRight:"0px"}}>

@@ -19,7 +19,9 @@
   color: white;
   background-color:rgba(4,71,132)!important; 
 }
-
+.tableData{
+  font-family:  monospace;
+}
 toolCard h2 {
 font-family:  IBM Plex Sans;
 font-size: 25px;

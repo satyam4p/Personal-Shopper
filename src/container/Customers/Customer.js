@@ -301,13 +301,13 @@ filterCustomers=(event)=>{
     
         <Card className="toolCard">
                 <Row>
-            <Col md="3"><h2 style={{float:"left",paddingLeft:"15px",paddingTop:"5px",fontSize:"20px",fontWeight:"800px",fontFamily:"IBM Plex Sans"}}>CUSTOMERS</h2></Col><Col md="3"></Col>
-            <Col md="6">
+            <Col md="3"><h2 style={{float:"left",paddingLeft:"15px",paddingTop:"10px",fontSize:"20px",fontWeight:"800px",fontFamily:"IBM Plex Sans"}}>CUSTOMERS</h2></Col><Col md="3"></Col>
+            <Col md="6" style={{paddingTop:"5px"}}>
           
                 {/* <Button style={{float:"left",marginRight:"10px"}} outline color="secondary" >Add New</Button>
                 <Button style={{float:"left",marginRight:"10px"}}  outline color="secondary">Upload</Button> */}      
                 <Input style={{width:"40%",float:"right", border:"1px solid rgba(4,71,132)" }} className="form" onChange={this.filterCustomers} type="text" name="search" id="searchText" placeholder="Type to Search" />
-                <Button className="ButtonClass10" style={{float:"right" ,marginRight:"10px", border:"1px solid rgba(4,71,132)"}}   outline  onClick={this.changeView}>{!this.state.listview ? <MdReorder size={24}/>:<MdViewModule size={24}/>}</Button>
+                <Button className="ButtonClass10" style={{float:"right" ,marginRight:"10px",paddingBottom:"5px", border:"1px solid rgba(4,71,132)"}}   outline  onClick={this.changeView}>{!this.state.listview ? <MdReorder size={24}/>:<MdViewModule size={24}/>}</Button>
             </Col>
           
             </Row> 

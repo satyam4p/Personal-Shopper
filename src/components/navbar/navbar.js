@@ -9,7 +9,7 @@ import {
  
 } from 'reactstrap';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
-import '../../App.css';
+// import '../../App.css';
 import Routes from '../../route';
 import './navbar.css';
 
@@ -45,7 +45,7 @@ function NavbarComponent(props) {
 
           <NavbarBrand className="brandOne" href={BaseName}>
 
-            <div className="brandName"><h3 className="top">PERSONAL SHOPPER</h3><h6 className="top">GROUPE</h6></div>
+            <div className="brandName"><h4 className="top">PERSONAL SHOPPER</h4><h6 className="groupe">GROUPE</h6></div>
 
           </NavbarBrand>
           <NavbarBrand className="secondBrand">
@@ -62,15 +62,12 @@ function NavbarComponent(props) {
           </NavbarBrand> */}
 
         </div>
-        <div><i className="setting_icon"></i></div>
+        {/* <div><i className="setting_icon"></i></div> */}
       </Navbar>
       <Router>
         <Collapse isOpen={isOpen}>
-
           <Card style={{backgroundColor:" rgb(225, 243, 252) ",paddingTop:"10px",paddingBottom:"10px",height:"50px"}}>
             <Row className="menuRow">
-              {/* <Col md="0"><NavLink to="/"  style={{ textDecoration:"none" ,color:"blue"}} exact></NavLink></Col>   */}
-              {/* <Col md="0"><NavLink to="/"  style={{ textDecoration:"none" ,color:"blue"}} exact></NavLink></Col> */}
               <Router basename={BaseName} forceRefresh={true}>
                 <div className="table">
                   <ul className="horizontal-list">

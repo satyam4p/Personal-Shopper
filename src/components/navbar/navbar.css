@@ -1,6 +1,5 @@
 .navlinkClass{
     text-decoration: none;
-    
         font-weight: "bold";
         color:"black";
         padding-top:"10px";
@@ -26,14 +25,21 @@
 .brandOne{
     float: left;
 }
+.brandName{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+}
+.groupe{
+    margin-top: 4px;
+}
 .horizontal-list{
     margin-top: 10px;
     margin-right: 0px;
 }
 .horizontal-list li{
     display: inline; 
- 
 }
 /* .menuCard{
     height: 50px;
