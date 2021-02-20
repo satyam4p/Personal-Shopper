@@ -12,7 +12,7 @@ import { Link, BrowserRouter as Router } from 'react-router-dom';
 import '../../App.css';
 import Routes from '../../route';
 import './navbar.css';
-import RabbitLogo from './images/logo.png';
+
 
 function NavbarComponent(props) {
 
