@@ -26,7 +26,7 @@ function NavbarComponent(props) {
   //   const BaseName=`/Rabbit/container.jsp?CSRFToken`
   //  const token = window.AppInfo.bridgecsrftoken;
   // const BaseName = `/Rabbit/container.jsp?CSRFToken=${token}`;
-  const BaseName = "/RueGilt";
+  const BaseName = "personalshopper.netlify.app//RueGilt";
   // var loggedInUser = window.AppInfo.loginid;
   // console.log("loginId: ", loggedInUser);
 
@@ -50,7 +50,7 @@ function NavbarComponent(props) {
           </NavbarBrand>
           <NavbarBrand className="secondBrand">
 
-            <div className="logoDiv"><img className="rabbitLogo" src={RabbitLogo} alt="" /></div>
+            {/* <div className="logoDiv"><img className="rabbitLogo" src={RabbitLogo} alt="" /></div> */}
 
           </NavbarBrand>
 
